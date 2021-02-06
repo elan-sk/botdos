@@ -8,12 +8,14 @@ from decouple import config
 VERSION = 0.1
 
 # Obtiene el token desde el archivo de configuración
-TELEGRAM_TOKEN = config('TELEGRAM_TOKEN') or config('TELEGRAM_TOKEN')
+TELEGRAM_TOKEN = config('TELEGRAM_TOKEN')
 
 #########################################################
+
 # Crea el objeto bot utilizando el token
-bot = telebot.TeleBot(TELEGRAM_TOKEN) 
+bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 # Determina el nivel de los mensajes que se van a mostrar (debug)
 telebot.logger.setLevel(logging.INFO)
+
 #########################################################
